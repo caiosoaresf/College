@@ -6,10 +6,10 @@ int main()
 {
     int v1, v2, i = 0;
     
-    printf("Insira o primeiro valor do intervalo: ");
+    printf("Insert the first value of the sequence: ");
     scanf("%d", &v1);
     
-    printf("Insira o ultimo valor do intervalo: ");
+    printf("Insert the second value of the sequence: ");
     scanf("%d", &v2);
     
     i = v1;
