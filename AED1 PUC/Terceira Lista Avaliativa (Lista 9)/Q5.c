@@ -17,6 +17,7 @@ void CopyNegatives(int arr4y[10]){
         if (arr4y[i] < 0){
             arrayN[i] = arr4y[i];
             printf("%d", arrayN[i]);
+            fflush(stdout);
         }
     }
 }
