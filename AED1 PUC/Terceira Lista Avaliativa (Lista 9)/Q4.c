@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <math.h>
 
-void ArraySub(int arr4yA[10], int arr4yB[10]){
-    int arrayC[10];
+int* ArraySub(int arr4yA[10], int arr4yB[10]){
+    int* arrayC = malloc(10 * sizeof(int));;
     for(int i = 0; i < 10; i++){
         arrayC[i] = arr4yA[i] - arr4yB[i];
-        printf("%d\n", arrayC[i]);
     }
+    return arrayC;
 }
 
 int main()
@@ -25,6 +25,11 @@ int main()
         arrayB[i] = num;
     }
   
-    ArraySub(arrayA,arrayB);
+    int* arrayC = ArraySub(arrayA,arrayB);
+    for (int i = 0; i < 10; i++){
+        printf("%d\n", arrayC[i]);
+    }
+    
+    free(arrayC);
     return 0;
 }
