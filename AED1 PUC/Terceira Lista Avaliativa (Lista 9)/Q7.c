@@ -28,7 +28,7 @@ void SumMainDiagonal(int array1[][MAX], int quantity) {
 void SumUnderDiagonal(int array1[][MAX], int quantity){
     int sum = 0;
     for (int i = 0; i < quantity; i++){
-        for (int j = 0; j <= i; j++){
+        for (int j = 0; j < i; j++){
             sum += array1[i][j];
         }
     }
