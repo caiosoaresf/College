@@ -38,7 +38,7 @@ int main() {
 
         if (!is_fibonacci) {
             fibonot_pos++;
-            if (fibonot_pos == n-1) {
+            if (fibonot_pos == n) {
                 printf("Fibonot at position %d is: %d\n", n, num);
                 break;
             }
