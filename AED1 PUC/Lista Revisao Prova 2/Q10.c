@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int inverting(int *arr, int s1ze){
+void inverting(int *arr, int s1ze){
     int *start = arr;
     int *end = arr + s1ze - 1;
     
@@ -13,7 +13,6 @@ int inverting(int *arr, int s1ze){
         start++;
         end--;
     }
-    return(1);
 }
 
 void main() {
