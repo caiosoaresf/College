@@ -18,7 +18,7 @@ int timeToMinutes(Time t) {
 
 Time minutesToTime(int minutes) {
     Time t;
-    minutes %= 1440; // Handle cases where minutes might be negative or > 1440
+    minutes %= 1440;
     if (minutes < 0) minutes += 1440;
     t.hour = minutes / 60;
     t.minute = minutes % 60;
@@ -52,7 +52,6 @@ int main() {
     
     int time_zone_diff_hours = time_zone_diff_min / 60;
     
-    // Adjust to be within (-12, 12]
     if (time_zone_diff_hours <= -12) {
         time_zone_diff_hours += 24;
     } else if (time_zone_diff_hours > 12) {
@@ -60,6 +59,5 @@ int main() {
     }
     
     printf("%d %d\n", flight_time_min, time_zone_diff_hours);
-    
     return 0;
 }
