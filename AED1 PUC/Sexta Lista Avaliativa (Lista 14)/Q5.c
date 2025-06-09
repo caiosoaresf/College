@@ -30,6 +30,6 @@ void main() {
 
     printf("List of bands:\n");
     for (int i = 0; i < 5; i++) {
-        printf("Band %d: , whose name is: %s, genre is %s, number os members is: %d, and position in ranking is %d", i+1, b[i].name, b[i].genre, b[i].members, b[i].rank);
+        printf("Band %d: , whose name is: %s, genre is %s, number os members is: %d, and position in ranking is %d\n", i+1, b[i].name, b[i].genre, b[i].members, b[i].rank);
     }
 }
