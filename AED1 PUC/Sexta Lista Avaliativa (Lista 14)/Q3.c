@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 typedef struct {
     int day;
@@ -14,9 +15,17 @@ typedef struct {
     Date birth;
 } Person;
 
+Date RandomDate() {
+    Date rd;
+    rd.day = (rand() % 30) + 1;
+    rd.month = (rand() % 12) + 1;
+    rd.year = (rand() % 25) + 2000;
+    return rd;
+}
+
 void main() {
     Person p[10];
-
+    srand(time(NULL));
     int i = 1;
     do {
         printf("Person %d:\n", i);
@@ -35,6 +44,7 @@ void main() {
         getchar();
         i++;
     } while (i <= 10);
+    p[i].birth = RandomDate();
 
     printf("List of the people:\n");
     for (int i = 1; i <= 10; i++) {
