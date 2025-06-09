@@ -37,7 +37,7 @@ void main() {
     } while (i <= 10);
 
     printf("List of the people:\n");
-    for (int i = 0; i < 10; i++) {
+    for (int i = 1; i <= 10; i++) {
         printf("Person %d: , whose name is: %s, height is %.2f and date of birth is: %02d/%02d/%d ", i, p[i].name, p[i].height, p[i].birth.day, p[i].birth.month, p[i].birth.year);
     }
 }
