@@ -36,7 +36,7 @@ void main() {
         scanf("%f", &p[i].height);
         getchar();
 
-        printf("Date de birth (DD MM AAAA): ");
+        printf("Date of birth (DD MM AAAA): ");
         scanf("%d %d %d", 
               &p[i].birth.day,
               &p[i].birth.month,
