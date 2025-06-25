@@ -4,7 +4,6 @@
 using namespace std;
 
 class SimpleCircle {
-private:
     double radius;
     double centerX;
     double centerY;
@@ -23,49 +22,49 @@ private:
         return sqrt(dx*dx + dy*dy);
     }
 
-public:
-    SimpleCircle() : radius(1.0), centerX(0.0), centerY(0.0) {}
-
-    void setRadius(double newRadius) {
-        if (newRadius > 0) {
-            radius = newRadius;
+    public:
+        SimpleCircle() : radius(1.0), centerX(0.0), centerY(0.0) {}
+    
+        void setRadius(double newRadius) {
+            if (newRadius > 0) {
+                radius = newRadius;
+            }
         }
-    }
-
-    void increaseRadius(double percentage) {
-        if (percentage > 0) {
-            radius *= (1 + percentage/100);
+    
+        void increaseRadius(double percentage) {
+            if (percentage > 0) {
+                radius *= (1 + percentage/100);
+            }
         }
-    }
-
-    void setCenter(double x, double y) {
-        centerX = x;
-        centerY = y;
-    }
-
-    void printRadius() {
-        cout << "Radius: " << fixed << setprecision(2) << radius << endl;
-    }
-
-    void printCenter() {
-        cout << "Center: (" << fixed << setprecision(2) << centerX << ", " << centerY << ")" << endl;
-    }
-
-    void printArea() {
-        cout << "Area: " << fixed << setprecision(2) << calculateArea() << endl;
-    }
-
-    void printAll() {
-        printRadius();
-        printCenter();
-        printArea();
-        cout << "Circumference: " << fixed << setprecision(2) << calculateCircumference() << endl;
-    }
-
-    void distanceTo(const SimpleCircle& other) {
-        cout << "Distance between centers: " << fixed << setprecision(2) 
-             << calculateCenterDistance(other) << endl;
-    }
+    
+        void setCenter(double x, double y) {
+            centerX = x;
+            centerY = y;
+        }
+    
+        void printRadius() {
+            cout << "Radius: " << fixed << setprecision(2) << radius << endl;
+        }
+    
+        void printCenter() {
+            cout << "Center: (" << fixed << setprecision(2) << centerX << ", " << centerY << ")" << endl;
+        }
+    
+        void printArea() {
+            cout << "Area: " << fixed << setprecision(2) << calculateArea() << endl;
+        }
+    
+        void printAll() {
+            printRadius();
+            printCenter();
+            printArea();
+            cout << "Circumference: " << fixed << setprecision(2) << calculateCircumference() << endl;
+        }
+    
+        void distanceTo(const SimpleCircle& other) {
+            cout << "Distance between centers: " << fixed << setprecision(2) 
+                 << calculateCenterDistance(other) << endl;
+        }
 };
 
 int main() {
