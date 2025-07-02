@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void main() {
+int main() {
     int firstArray[20];
     int *secondArray;
     int countMultiples = 0;
@@ -57,4 +57,5 @@ void main() {
     }
 
     free(secondArray);
+    return 0;
 }
