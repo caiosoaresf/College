@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
-    int v1[20];
+void main() {
+    int v1[60];
     srand(time(NULL));
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 60; i++) {
         int n;
         do {
             n = rand() % 100 + 1;
@@ -24,10 +24,7 @@ int main() {
         } while (1);
     }
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 60; i++) {
         printf("%d ", v1[i]);
     }
-
-    free(v1);
-    return 0;
 }
