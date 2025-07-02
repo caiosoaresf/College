@@ -3,10 +3,10 @@
 #include <time.h>
 
 void main() {
-    int v1[60];
+    int v1[20];
     srand(time(NULL));
 
-    for (int i = 0; i < 60; i++) {
+    for (int i = 0; i < 20; i++) {
         int n;
         do {
             n = rand() % 100 + 1;
@@ -24,7 +24,7 @@ void main() {
         } while (1);
     }
 
-    for (int i = 0; i < 60; i++) {
+    for (int i = 0; i < 20; i++) {
         printf("%d ", v1[i]);
     }
 }
